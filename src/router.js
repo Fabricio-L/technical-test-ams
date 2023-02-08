@@ -1,16 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom'
-import App from './App'
+import Home from './pages/Home'
+import Other from './pages/Other'
+import Products from './pages/Products'
+import Error from './system/Error'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-    errorElement: (
-      <div>
-        <h1>Oops!</h1>
-        <p>Sorry, an unexpected error has occurred.</p>
-      </div>
-    ),
+    element: <Home />,
+    errorElement: <Error />,
+    children: [
+      { path: '/', element: <Products /> },
+      { path: '/product:id', element: <Other /> },
+    ],
   },
 ])
 
