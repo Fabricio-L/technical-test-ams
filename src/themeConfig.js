@@ -14,6 +14,11 @@ const theme = () =>
         light: '#8A3BBF',
         dark: '#321659',
       },
+      text: {
+        primary: 'rgba(64,64,64,1)',
+        secondary: 'rgba(64,64,64,0.8)',
+        disabled: 'rgba(64,64,64,0.3)',
+      },
     },
   })
 
