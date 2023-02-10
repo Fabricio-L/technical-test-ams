@@ -4,10 +4,10 @@ import { Box, Typography } from '@mui/material'
 const ItemBrand = ({ brand, model }) => {
   return (
     <Box>
-      <Typography variant="body2" color="text.secondary">
+      <Typography variant="body1" color="text.secondary">
         {brand}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography variant="body1" color="text.secondary">
         {model}
       </Typography>
     </Box>

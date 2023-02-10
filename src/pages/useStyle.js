@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles'
 
 const useStyle = makeStyles({
-  showcaseContainer: {
+  mainContainer: {
     maxWidth: '1200px',
     margin: 'auto',
   },

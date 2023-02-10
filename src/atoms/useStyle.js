@@ -1,10 +1,16 @@
 import { makeStyles } from '@mui/styles'
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
   logoIconContainer: {
     '& .MuiSvgIcon-root': {
       display: 'flex',
       fontSize: '4rem',
+      color: theme.palette.primary.dark,
+    },
+  },
+  logoTitleContainer: {
+    '& .MuiTypography-root': {
+      fontWeight: 'bold',
     },
   },
   imageContainer: {
@@ -13,6 +19,6 @@ const useStyle = makeStyles({
       objectFit: 'contain',
     },
   },
-})
+}))
 
 export default useStyle

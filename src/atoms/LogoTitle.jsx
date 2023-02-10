@@ -1,11 +1,15 @@
-import { Fragment } from 'react'
-import { Typography } from '@mui/material'
+import useStyle from './useStyle'
+import { Box, Typography } from '@mui/material'
 
 const LogoTitle = () => {
+  const classes = useStyle()
+
   return (
-    <Fragment>
-      <Typography variant="h4">AMS test</Typography>
-    </Fragment>
+    <Box className={classes.logoTitleContainer}>
+      <Typography variant="h4" color="primary.dark">
+        AMS test
+      </Typography>
+    </Box>
   )
 }
 
