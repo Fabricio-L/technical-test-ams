@@ -5,9 +5,9 @@ const theme = () =>
     palette: {
       mode: 'light',
       primary: {
-        main: '#8D8D8D',
-        light: '#EBEBEA',
-        dark: '#181818',
+        main: '#8C8C8C',
+        light: '#F2F2F2',
+        dark: '#404040',
       },
       secondary: {
         main: '#6E37A6',
