@@ -4,7 +4,7 @@ import { TableCell, Typography } from '@mui/material'
 const ProductDescriptionTitle = ({ name }) => {
   return (
     <TableCell>
-      <Typography variant="h6" color="text.secondary">
+      <Typography variant="h6" color="white">
         {name}
       </Typography>
     </TableCell>

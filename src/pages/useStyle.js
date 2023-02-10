@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles'
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
   mainContainer: {
     maxWidth: '1200px',
     margin: 'auto',
@@ -12,6 +12,16 @@ const useStyle = makeStyles({
     gap: '1rem',
     margin: '1rem',
   },
-})
+  productContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    padding: '2rem',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
+  },
+}))
 
 export default useStyle

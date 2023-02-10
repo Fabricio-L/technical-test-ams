@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
-import { Table, TableContainer, Paper } from '@mui/material'
+import { Table, TableBody, TableContainer, Paper } from '@mui/material'
 import DescriptionHead from '../molecules/DescriptionHead'
 import DescriptionBody from '../molecules/DescriptionBody'
+import useStyle from './useStyle'
 
 const formatData = description => {
   const dataFormated = [
@@ -59,18 +60,21 @@ const formatData = description => {
 }
 
 const CustomDescription = ({ description }) => {
+  const classes = useStyle()
   const columns = ['Característica', 'Descripción']
   const rows = formatData(description)
 
   return (
-    <section>
+    <section className={classes.tableContainer}>
       <TableContainer component={Paper}>
-        <Table aria-label="customized table">
+        <Table size="small" aria-label="a dense table">
           <DescriptionHead columns={columns} />
-          {rows &&
-            rows.map((row, i) => (
-              <DescriptionBody key={i} name={row.name} value={row.value} />
-            ))}
+          <TableBody>
+            {rows &&
+              rows.map((row, i) => (
+                <DescriptionBody key={i} name={row.name} value={row.value} />
+              ))}
+          </TableBody>
         </Table>
       </TableContainer>
     </section>
