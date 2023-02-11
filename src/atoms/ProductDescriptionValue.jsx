@@ -6,12 +6,12 @@ const ProductDescriptionValue = ({ name, value }) => {
   return (
     <Fragment>
       <TableCell>
-        <Typography variant="h6" color="text.secondary">
+        <Typography variant="subtitle2" color="text.secondary">
           {name}
         </Typography>
       </TableCell>
       <TableCell>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body2" color="text.secondary">
           {value}
         </Typography>
       </TableCell>

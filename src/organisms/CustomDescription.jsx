@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Table, TableBody, TableContainer, Paper } from '@mui/material'
+import { Table, TableBody, TableContainer } from '@mui/material'
 import DescriptionHead from '../molecules/DescriptionHead'
 import DescriptionBody from '../molecules/DescriptionBody'
 import useStyle from './useStyle'
@@ -66,7 +66,7 @@ const CustomDescription = ({ description }) => {
 
   return (
     <section className={classes.tableContainer}>
-      <TableContainer component={Paper}>
+      <TableContainer>
         <Table size="small" aria-label="a dense table">
           <DescriptionHead columns={columns} />
           <TableBody>
