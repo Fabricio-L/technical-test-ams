@@ -4,7 +4,7 @@ const useStyle = makeStyles(theme => ({
   logoIconContainer: {
     '& .MuiSvgIcon-root': {
       display: 'flex',
-      fontSize: '4rem',
+      fontSize: '3rem',
       color: theme.palette.primary.dark,
     },
   },
