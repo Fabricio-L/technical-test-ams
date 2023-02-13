@@ -2,25 +2,18 @@ import PropTypes from 'prop-types'
 import { useContext, useEffect, useState } from 'react'
 import { MenuItem, Select } from '@mui/material'
 import { CartContext } from '../context/CartProvider'
-import { useParams } from 'react-router-dom'
 
 const ActionSelect = ({ name, actions }) => {
-  const [value, setValue] = useState(null)
-  const { idProduct } = useParams()
+  const [value, setValue] = useState('')
   const cart = useContext(CartContext)
 
   const code = `${name.slice(0, -1)}Code`
-
-  useEffect(() => {
-    cart.setCart({ ...cart.cart, id: idProduct })
-  }, [])
 
   useEffect(() => {
     Object.keys(cart.cart).forEach(field => {
       if (field === code && code === 'colorCode') {
         cart.setCart({ ...cart.cart, colorCode: value })
       }
-
       if (field === code && code === 'storageCode') {
         cart.setCart({ ...cart.cart, storageCode: value })
       }
@@ -39,7 +32,7 @@ const ActionSelect = ({ name, actions }) => {
       label={name}
       onChange={handleSelect}
     >
-      <MenuItem value={null}>
+      <MenuItem value={''}>
         <em>None</em>
       </MenuItem>
       {actions.map((option, i) => (

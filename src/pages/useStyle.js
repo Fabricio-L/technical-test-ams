@@ -9,17 +9,19 @@ const useStyle = makeStyles(theme => ({
     display: 'grid',
     justifyItems: 'center',
     gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-    gap: '1rem',
-    margin: '1rem',
+    gap: '3rem',
+    margin: '4rem 0rem',
   },
   productContainer: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    margin: '4rem 0rem',
     padding: '2rem',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
+      margin: '1rem 0rem',
     },
   },
 }))

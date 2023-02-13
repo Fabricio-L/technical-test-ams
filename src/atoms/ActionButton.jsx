@@ -3,6 +3,7 @@ import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRound
 import { Button } from '@mui/material'
 import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../context/CartProvider'
+import apiPostProduct from '../services/apiPostProduct'
 
 const ActionButton = ({ name }) => {
   const cart = useContext(CartContext)
@@ -14,12 +15,18 @@ const ActionButton = ({ name }) => {
       : setEnable(true)
   }, [cart.cart])
 
+  const handleAddProduct = async () => {
+    const resp = await apiPostProduct(cart.cart)
+    cart.setCount(resp.count)
+  }
+
   return (
     <Button
-      color="success"
+      color="secondary"
       variant="contained"
-      style={{ minWidth: '30%' }}
+      style={{ minWidth: '30%', margin: '1rem 0rem', boxShadow: 'unset' }}
       disabled={enable}
+      onClick={handleAddProduct}
       startIcon={<AddShoppingCartRoundedIcon />}
     >
       {name}

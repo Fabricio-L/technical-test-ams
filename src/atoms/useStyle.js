@@ -4,8 +4,8 @@ const useStyle = makeStyles(theme => ({
   logoIconContainer: {
     '& .MuiSvgIcon-root': {
       display: 'flex',
-      fontSize: '3rem',
-      color: theme.palette.primary.dark,
+      fontSize: '1.5rem',
+      color: theme.palette.secondary.light,
     },
   },
   logoTitleContainer: {
@@ -14,9 +14,26 @@ const useStyle = makeStyles(theme => ({
     },
   },
   imageContainer: {
-    padding: '1rem',
+    background: 'white',
+    borderRadius: '13px',
+    padding: '2rem',
+    margin: '2rem 0rem',
     '& .MuiCardMedia-root': {
       objectFit: 'contain',
+    },
+  },
+  imageItemContainer: {
+    background: 'white',
+    padding: '2rem',
+    borderRadius: '13px',
+    '& .MuiCardMedia-root': {
+      objectFit: 'contain',
+    },
+  },
+  brandContainer: {
+    '& .MuiTypography-root': {
+      fontWeight: 'bold',
+      lineHeight: 'unset',
     },
   },
 }))

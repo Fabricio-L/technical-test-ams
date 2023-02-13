@@ -6,7 +6,7 @@ const ItemImage = ({ img, alt }) => {
   const classes = useStyle()
 
   return (
-    <Box className={classes.imageContainer}>
+    <Box className={classes.imageItemContainer}>
       <CardMedia component="img" height="240" image={img} alt={alt} />
     </Box>
   )

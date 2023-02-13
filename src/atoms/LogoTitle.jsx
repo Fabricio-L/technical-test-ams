@@ -6,7 +6,7 @@ const LogoTitle = () => {
 
   return (
     <Box className={classes.logoTitleContainer}>
-      <Typography variant="h4" color="primary.dark">
+      <Typography variant="h6" color="secondary.light">
         AMS test
       </Typography>
     </Box>

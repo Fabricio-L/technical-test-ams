@@ -11,8 +11,8 @@ const DescriptionBody = ({ name, value }) => {
 }
 
 DescriptionBody.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
+  name: PropTypes.any,
+  value: PropTypes.any,
 }
 
 export default DescriptionBody

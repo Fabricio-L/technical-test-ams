@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const ItemLink = ({ id, children }) => {
+const ItemLink = ({ model, id, children }) => {
   return (
     <Link
-      to={`/product/${id}`}
+      to={`/products/${model}/${id}`}
       style={{ textDecoration: 'none', color: 'inherit' }}
     >
       {children}
@@ -13,6 +13,7 @@ const ItemLink = ({ id, children }) => {
 }
 
 ItemLink.propTypes = {
+  model: PropTypes.string,
   id: PropTypes.string,
   children: PropTypes.array,
 }

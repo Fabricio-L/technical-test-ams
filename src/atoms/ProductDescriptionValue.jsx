@@ -20,8 +20,8 @@ const ProductDescriptionValue = ({ name, value }) => {
 }
 
 ProductDescriptionValue.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
+  name: PropTypes.any,
+  value: PropTypes.any,
 }
 
 export default ProductDescriptionValue

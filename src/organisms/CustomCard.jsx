@@ -11,7 +11,7 @@ const CustomCard = ({ product }) => {
   return (
     <Box sx={{ maxWidth: 320 }} className={classes.cardContainer}>
       <CardActionArea>
-        <ItemLink id={product.id}>
+        <ItemLink id={product.id} model={product.model}>
           <ItemImage img={product.imgUrl} alt={product.model} />
           <ItemFooter
             price={product.price}
