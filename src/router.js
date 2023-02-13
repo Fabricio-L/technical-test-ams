@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
+import ItemLink from './atoms/ItemLink'
 import Home from './pages/Home'
 import Product from './pages/Product'
 import Products from './pages/Products'
@@ -10,8 +11,8 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Products /> },
-      { path: '/product/:idProduct', element: <Product /> },
+      { path: '/products', element: <Products /> },
+      { path: '/products/:modelProduct/:idProduct', element: <Product /> },
     ],
   },
 ])
