@@ -4,6 +4,7 @@ import { createContext, useState } from 'react'
 export const CartContext = createContext(null)
 
 const CartProvider = ({ children }) => {
+  const [count, setCount] = useState(0)
   const [cart, setCart] = useState({
     id: null,
     colorCode: null,
@@ -11,7 +12,7 @@ const CartProvider = ({ children }) => {
   })
 
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
+    <CartContext.Provider value={{ cart, setCart, count, setCount }}>
       {children}
     </CartContext.Provider>
   )
