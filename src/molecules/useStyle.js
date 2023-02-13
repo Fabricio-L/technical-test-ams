@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles'
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles({
   itemFooterContainenr: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -14,6 +14,6 @@ const useStyle = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
   },
-}))
+})
 
 export default useStyle
