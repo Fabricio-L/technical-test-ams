@@ -1,3 +1,6 @@
+import { Box } from '@mui/material'
+import ShopButton from '../atoms/ShopButton'
+import BreadcrumbsHeader from '../molecules/BreadcrumbsHeader'
 import Logo from '../molecules/Logo'
 import useStyle from './useStyle'
 
@@ -6,7 +9,11 @@ const CustomHeader = () => {
 
   return (
     <section className={classes.headerContainer}>
-      <Logo />
+      <Box className={classes.headerSub}>
+        <Logo />
+        <BreadcrumbsHeader />
+      </Box>
+      <ShopButton />
     </section>
   )
 }

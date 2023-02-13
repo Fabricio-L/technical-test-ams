@@ -11,8 +11,17 @@ const theme = () =>
       },
       secondary: {
         main: '#6E37A6',
-        light: '#8A3BBF',
+        light: '#8A3BBF', //#9100ff
         dark: '#321659',
+      },
+      text: {
+        primary: 'rgba(0,0,0,1)',
+        secondary: 'rgba(64,64,64,0.8)',
+        disabled: 'rgba(64,64,64,0.3)',
+      },
+      background: {
+        paper: '#fff',
+        default: '#F2F2F2',
       },
     },
   })

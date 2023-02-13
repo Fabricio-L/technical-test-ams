@@ -8,7 +8,7 @@ const Products = () => {
   const { products } = useProducts()
 
   return (
-    <section className={classes.showcaseContainer}>
+    <section className={classes.mainContainer}>
       <Box className={classes.showcase}>
         {products &&
           products.map((product, i) => (
