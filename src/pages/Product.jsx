@@ -1,5 +1,7 @@
+import { useContext, useEffect } from 'react'
 import { Box } from '@mui/material'
 import { useParams } from 'react-router-dom'
+import { CartContext } from '../context/CartProvider'
 import useStyle from './useStyle'
 import useProduct from '../hooks/useProduct'
 import ProductImage from '../atoms/ProductImage'
@@ -10,6 +12,17 @@ const Product = () => {
   const classes = useStyle()
   const { idProduct } = useParams()
   const { product } = useProduct(idProduct)
+  const cart = useContext(CartContext)
+
+  const data = {
+    id: idProduct,
+    colorCode: '',
+    storageCode: '',
+  }
+
+  useEffect(() => {
+    cart.setCart(data)
+  }, [])
 
   if (!product) return null
 
